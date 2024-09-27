@@ -1,0 +1,6 @@
+spring:
+  config:
+    activate:
+      on-profile: prod
+cors:
+  allowed-origins: "https://shop-front-pi.vercel.app/"
