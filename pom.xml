@@ -70,6 +70,13 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.azure/azure-spring-data-cosmos -->
+        <dependency>
+            <groupId>com.azure</groupId>
+            <artifactId>azure-spring-data-cosmos</artifactId>
+            <version>5.16.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>
