@@ -1,51 +1,38 @@
 package web.course.shopback.models;
 
-import com.azure.spring.data.cosmos.core.mapping.Container;
-import com.azure.spring.data.cosmos.core.mapping.PartitionKey;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Container(containerName = "Items")
+import java.time.LocalDate;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@Entity
+@Table(name = "users")
 public class User {
 
-    @Id
-    private String id;
+    @jakarta.persistence.Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer userId;
 
-    @PartitionKey
-    private String partitionKey;
+    private String phoneNumber;
 
-    private String name;
-    private String phone;
+    private String firstName;
 
+    private String lastName;
 
-    public String getId() {
-        return id;
-    }
+    private String email;
 
-    public void setId(String id) {
-        this.id = id;
-    }
+    private LocalDate birthDate;
 
-    public String getPartitionKey() {
-        return partitionKey;
-    }
+    private LocalDate registrationDate;
 
-    public void setPartitionKey(String partitionKey) {
-        this.partitionKey = partitionKey;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
 }
