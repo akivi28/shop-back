@@ -1,4 +1,4 @@
-package web.course.shopback.models;
+package web.course.shopback.models.auth;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

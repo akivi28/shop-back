@@ -2,8 +2,7 @@ package web.course.shopback.controllers;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import web.course.shopback.models.User;
-import web.course.shopback.repositories.UserRepository;
+import web.course.shopback.models.auth.User;
 import web.course.shopback.services.UserService;
 
 import java.util.List;
